@@ -9,8 +9,8 @@ while let line = readLine() {
 
 func swap(strings: inout [String], firstIndex: Int, secondIndex: Int) {
     var swapCount : Int = 0, swapTotal : Int = 0
-    for passCount in 0 ... strings.count {
-        for value in 1 ... strings.count - 1 where passCount != 0 {
+    for passCount in 0 ..< strings.count {
+        for value in 1 ..< strings.count - 1 where passCount != 0 {
             if strings[value - 1] > strings[value] {
                 let biggerValue = strings[value - 1]
                 strings[value - 1] = strings[value]
@@ -19,11 +19,13 @@ func swap(strings: inout [String], firstIndex: Int, secondIndex: Int) {
             }
         }
         swapTotal += swapCount
-        print("Pass: \(passCount), Swaps: \(swapCount)/\(swapTotal), Array: \(strings)")
         if (swapCount == 0) && (passCount != 0) {
             break;
         }
         swapCount = 0
+    }
+    for line in strings {
+        print(line)
     }
 }
 
