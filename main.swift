@@ -1,11 +1,11 @@
-// ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩
-// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
-let unsortedStrings = ["test", "bob", "unknown", "null"]
-// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
-// ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧
-
 // Add your code below:
-var strings : [String] = unsortedStrings
+import Foundation
+
+var arrStr : [String] = []
+
+while let line = readLine() {
+    arrStr.append(line)
+}
 
 func swap(strings: inout [String], firstIndex: Int, secondIndex: Int) {
     var swapCount : Int = 0, swapTotal : Int = 0
@@ -26,4 +26,5 @@ func swap(strings: inout [String], firstIndex: Int, secondIndex: Int) {
         swapCount = 0
     }
 }
-swap(strings: &strings, firstIndex: 0, secondIndex: 0) //No variables were created for firstIndex & secondIndex
+
+swap(strings: &arrStr, firstIndex: 0, secondIndex: 1)
