@@ -9,7 +9,7 @@ while let line = readLine() {
 
 func swap(strings: inout [String], firstIndex: Int, secondIndex: Int) {
     for passCount in 0 ..< strings.count {
-        for value in 1 ..< strings.count - 1 where passCount != 0 {
+        for value in 1 ... strings.count - 1 where passCount != 0 {
             if strings[value - 1] > strings[value] {
                 let biggerValue = strings[value - 1]
                 strings[value - 1] = strings[value]
